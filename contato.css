@@ -1,0 +1,262 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  background-color: #fcead7;
+  color: #1e1e1e;
+
+}
+header {
+  background-color: #fddde6;
+  color: #521c37;
+  padding: 1rem;
+  text-align: center;
+   position: relative;
+}
+
+
+.header-stickers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; 
+}
+
+
+/* ===== ESTRELINHAS / CORAÇÕES FLUTUANDO ===== */
+.floating-star {
+  position: fixed;
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: subirSumir 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes subirSumir {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+footer {
+  background-color: #fddde6;
+  color: #1e1e1e;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a {
+  color: #b15985;
+}
+
+section {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+
+
+
+/* ======== IMAGEM DESTAQUE ======== */
+.imagem-destaque img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 4px solid #fddde6;
+}
+
+/* ======== SEÇÃO DE CONTATO ======== */
+.contato {
+  max-width: 700px;     
+  width: 90%;           
+  margin: 40px auto;  
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.contato h2 {
+  color: #521c37;
+  margin-bottom: 15px;
+}
+
+.contato p {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* ======== FORMULÁRIO ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  color: #521c37;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f3c8d7;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fffafc;
+  resize: none;
+}
+
+
+
+button {
+  align-self: center;
+  background-color: #b15985;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #521c37;
+}
+
+/* ======== CURSOR PERSONALIZADO ======== */
+.cursor-brilho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: pink;
+  box-shadow: 0 0 15px pink;
+  filter: blur(2px);
+  transition: 0.1s;
+  z-index: 9999; 
+}
+
+@keyframes brilhoPulse {
+  0% { box-shadow: 0 0 8px 2px rgba(255,130,200,0.5); opacity: 0.9; }
+  100% { box-shadow: 0 0 25px 8px rgba(255,180,220,0.9); opacity: 1; }
+}
+
+html, body, a, button, input, textarea, .card-flip, .card-inner, .card-front, .card-back {
+    cursor: none;
+}
+
+
+
+/* DEPOIS DE ENVIADO */
+
+    .sucesso-container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px;
+      background: #ffffffee;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: fade .7s ease-in-out;
+    }
+
+.sucesso-container h1 {
+  color: #9c2573;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.sucesso-container p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+    a.botao {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #9c2573;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: .2s;
+    }
+
+    a.botao:hover {
+      background: #751a56;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+
+/* ====== RESPONSIVIDADE CONTATO ====== */
+@media (max-width: 900px) {
+  section {
+    margin: 24px 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contato {
+    margin: 24px auto;
+    padding: 24px 20px;
+  }
+
+  .sucesso-container {
+    margin: 40px auto;
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.75rem;
+  }
+
+  .contato h2 {
+    font-size: 1.4rem;
+  }
+
+  .contato p {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - Sabrina Carpenter Wiki</title>
+  <link rel="stylesheet" href="contato.css">
+  <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Sabrina_Carpenter_signature.png/144px-Sabrina_Carpenter_signature.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="cursor-brilho"></div>
+
+  <header>
+    <h1 id="tituloPrincipal">Sabrina Carpenter-Wiki</h1>
+    <div class="header-stickers" id="headerStickers"></div>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="discografia.html">Discografia</a></li>
+        <li><a href="contato.html" class="ativo">Contato</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- AGORA A IMAGEM FICA DENTRO DO MAIN -->
+    <section class="imagem-destaque">
+      <img src="https://i.pinimg.com/1200x/e0/28/07/e02807aafd3205106e31f96ea76d76ca.jpg" alt="Sabrina Carpenter">
+    </section>
+
+    <section class="contato">
+      <h2>Entre em contato conosco!</h2>
+      <p>Participe! Se você tem um novo lore (história), uma correção de fato ou precisa atualizar qualquer detalhe, nos envie um e-mail! Sua contribuição é crucial para manter o Wiki da Sabrina o mais completo possível! 💌</p>
+
+      <form name="contato" method="POST" data-netlify="true" action="/sucesso.html">
+        <input type="hidden" name="form-name" value="contato">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="name" required minlength="3" placeholder="Seu nome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="message" required minlength="5" placeholder="Digite sua mensagem"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="discografia.html">Discografia</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 - UniLasalle - Sabrina Carpenter Wiki</p>
+  </footer>
+
+  <script src="contato.js"></script>
+</body>
+</html>

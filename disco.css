@@ -1,0 +1,272 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  background-color: #fcead7;
+  color: #1e1e1e;
+}
+
+header, footer {
+  background-color: #fddde6;
+  color: #521c37;
+  padding: 1rem;
+  text-align: center;
+}
+
+header {
+  background-color: #fddde6;
+  color: #521c37;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+.header-stickers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ===== ESTRELINHAS / CORAÇÕES FLUTUANDO ===== */
+.floating-star {
+  position: fixed;
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: subirSumir 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes subirSumir {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }}
+  
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #b15985;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  text-align: center;
+  margin: 40px;
+}
+
+/* ==== DISCOS CENTRALIZADOS ==== */
+.discografia-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* ==== CARDS FLIP ==== */
+.card-flip {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #fddde6;
+  color: #521c37;
+  padding: 15px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* ======== CURSOR PERSONALIZADO ======== */
+.cursor-brilho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: pink;
+  box-shadow: 0 0 15px pink;
+  filter: blur(2px);
+  transition: 0.1s;
+  z-index: 999999;
+  pointer-events: none;
+}
+
+@keyframes brilhoPulse {
+  0% { box-shadow: 0 0 8px 2px rgba(255,130,200,0.5); opacity: 0.9; }
+  100% { box-shadow: 0 0 25px 8px rgba(255,180,220,0.9); opacity: 1; }
+}
+
+html, body, a, button {
+  cursor: none;
+}
+
+/*tabela de albuns*/
+.tabela-discografia {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.tabela-discografia h2 {
+  text-align: center;
+  color: #000000;
+}
+
+.tabela-discografia p {
+  text-align: center;
+  color: #555;
+}
+
+.tabela-discografia table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.tabela-discografia th, .tabela-discografia td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.tabela-discografia th {
+  background-color: #a33b70;
+  color: white;
+  font-weight: bold;
+}
+
+.tabela-discografia tr:nth-child(even) {
+  background-color: #fdf0f7;
+}
+
+.tabela-discografia tr:hover {
+  background-color: #f4d5eb;
+  transition: background-color 0.3s;
+}
+
+.tabela-discografia a {
+  color: #a33b70;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.tabela-discografia a:hover {
+  color: #6a1d43;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Responsividade mobile */
+@media (max-width: 600px) {
+  .tabela-discografia {
+    width: 95%;
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  .tabela-discografia table {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .tabela-discografia th,
+  .tabela-discografia td {
+    padding: 8px 6px;
+  }
+}
+
+/* ====== RESPONSIVIDADE DISCO ====== */
+@media (max-width: 900px) {
+  section,
+  .secao-discos {
+    margin: 24px 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discografia-container {
+    gap: 20px;
+  }
+
+  .card-flip {
+    width: 80vw;
+    max-width: 320px;
+    height: 80vw;
+    max-height: 320px;
+  }
+
+  .tabela-discografia {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .tabela-discografia table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .tabela-discografia th,
+  .tabela-discografia td {
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabela-discografia table {
+    font-size: 0.85rem;
+  }
+}
