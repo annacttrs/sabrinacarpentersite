@@ -55,7 +55,6 @@ if(dvSlider){
   var slides = [
     'https://capricho.abril.com.br/wp-content/uploads/2024/07/sabrina.jpg?quality=85&strip=info&w=1024',
     'https://uploads.metroimg.com/wp-content/uploads/2025/02/03173639/Sabrina-Carpenter-3.jpg',
-    'https://content.api.news/v3/images/bin/6c341c221f05bdcba9a7119fa2cd24df',
     'https://lorena.r7.com/wp-content/uploads/2025/09/Untitled-design-16.png',
     'https://blog.quizur.com/wp-content/uploads/2024/04/maxresdefault-2-1200x675.webp'
   ];
